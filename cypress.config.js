@@ -5,17 +5,18 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://practice.expandtesting.com/',
     setupNodeEvents(on, config) {
-      mochawesome(on); // Add this to register the plugin
+      mochawesome(on);  // register the plugin
       return config;
     },
     specPattern: "cypress/e2e/**/*.cy.js",
-    supportFile: "cypress/support/e2e.js", // or wherever your support file is
+    supportFile: "cypress/support/e2e.js",
   },
   reporter: "cypress-mochawesome-reporter",
   reporterOptions: {
     reportDir: "reports",
-    overwrite: false,
-    html: true,
-    json: true
-  }
+    charts: true,
+    reportPageTitle: "My Test Report",
+    embeddedScreenshots: true,
+    inlineAssets: true,
+  },
 });
