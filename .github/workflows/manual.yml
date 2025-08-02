@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:  # This enables manual triggering
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
   cypress-run:
@@ -20,10 +20,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'  # Adjust if your project uses a different version
+          node-version: '18'  # Or whatever your project uses
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # Faster and more reliable than `npm install`
+
+      - name: Install Cypress
+        run: npx cypress install
 
       - name: Run Cypress tests
         run: npx cypress run
