@@ -11,14 +11,17 @@ describe('Ass6', () => {
     });
 
 it('Registration_Form_Happypath', () => {
-    cy.fixture('Formdata').then((user) => {
+    cy.fixture('FormData').then((user) => {
     cy.visit('https://practice.expandtesting.com/register')
-    cy.get('input[name="username"]').type(Formdata.username);
-    cy.get('#password').type(Formdata.password);
-    cy.get('#confirmPassword').type(Formdata.confirmPassword);
+    cy.get('input[name="username"]').type(FormData.username);
+    cy.get('#password').type(FormData.password);
+    cy.get('#confirmPassword').type(FormData.confirmPassword);
     cy.get('button[type="submit"]').should('be.visible').and('contain.text', 'Register').click();
     
 })});
+
+
+
 
 //2. Working with Checkboxes, Dropdowns, Radio Buttons
 

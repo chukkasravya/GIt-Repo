@@ -3,8 +3,8 @@ describe('APIrequest',()=>{
     it('RestAPI',()=>{
         cy.request('POST','https://practice.expandtesting.com/notes/api/users/register',{
            name: "sravya21",
-           email: "scg@gamails41.com",
-           password:"scg@gamail35.com"
+           email: "scgww@gamail413.com",
+           password:"scgww@gamail413.com"
         }).then((res)=>{
             cy.log(res);
             expect(res.status).to.eq(201);
@@ -13,8 +13,8 @@ describe('APIrequest',()=>{
     })
 it('RestAPI', () => {
   cy.request('POST', 'https://practice.expandtesting.com/notes/api/users/login', {
-    email: "scg@gamails41.com",
-    password: "scg@gamail35.com"
+    email: "scgww@gamail413.com",
+    password: "scgww@gamail413.com"
   }).then((res) => {
     expect(res.status).to.eq(200);
     expect(res.body.message).to.eq("Login successful");
@@ -30,8 +30,8 @@ it('RestAPI', () => {
         'x-auth-token': accessToken
       },
       body: {
-        title: "scg@gamails41.com",
-        description: "suuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuom",
+        title: "scgww@gamail413.com",
+        description: "suuuuuuuuuuuuuuuuuuuuuuuuuuuuuooooooouom",
         category: "Work"
       }
     }).then((res2) => {
