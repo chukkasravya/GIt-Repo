@@ -1,7 +1,7 @@
 name: Run Cypress Tests Manually
 
 on:
-  workflow_dispatch:  # Allows manual run from GitHub UI
+  workflow_dispatch:  # Enables manual trigger
 
 jobs:
   cypress-run:
@@ -24,14 +24,14 @@ jobs:
 
       - name: Upload Cypress screenshots (if any)
         if: always()
-        uses: actions/upload-artifact@4
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
           path: cypress/screenshots
 
       - name: Upload Cypress videos (if any)
         if: always()
-        uses: actions/upload-artifact@4
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
           path: cypress/videos
