@@ -1,20 +1,26 @@
-name: Run Cypress Tests Manually
+name: Run Cypress Tests
 
 on:
-  workflow_dispatch:  # Enables manual trigger
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # This enables manual triggering
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout the code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '18'  # Adjust if your project uses a different version
 
       - name: Install dependencies
         run: npm install
