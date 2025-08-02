@@ -183,7 +183,7 @@ o Validate each row has a browser name.
 o Assert no cell is empty.
 o Verify at least one browser has CPU usage above 15%********** */
 describe('Dynamic Table - Validate cells and CPU without failing', () => {
-  it.only('Checks no empty cells, browser names present, and logs CPU > 15% status', () => {
+  it('Checks no empty cells, browser names present, and logs CPU > 15% status', () => {
     cy.visit('https://practice.expandtesting.com/dynamic-table');
 
     let nameIndex = -1;

@@ -7,7 +7,7 @@ describe('LETCONST',()=>{
 })
 describe('CONSTChanging',()=>{
     const Assignment="Declaring the const variable";
-    it.skip("Using the const vaiable",()=>{
+    it("Using the const vaiable",()=>{
          Assignment="Changing the Declared const variable";
         cy.log(Assignment);
     })
@@ -30,7 +30,7 @@ describe('For Loop to Sum of the Array',()=>{
 //Write a function that returns "Even" or "Odd" for a number.
 
 describe('Even or Odd',()=>{
-  it.only('Even or Odd',()=>{
+  it('Even or Odd',()=>{
   for(let i=1;i<=10;i++){
     if (i%2 == 0){
     cy.log("Even Number"+i);
@@ -46,7 +46,7 @@ describe('Even or Odd',()=>{
 //1. Loop through numbers 1–10 and print only even numbers.
 
 describe('print only even numbers',()=>{
-  it.only('print only even numbers',()=>{
+  it('print only even numbers',()=>{
     let i=0;
   while(i<=10){
     if(i%2 ==0){

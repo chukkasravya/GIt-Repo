@@ -33,7 +33,7 @@ describe('functionsAss',()=>{
       cy.log(multiplication(1,2,3,4));
         }),
    //Arrrow function for multiplication using for 
-    it.skip('Arrowfunctionformul',()=>{
+    it('Arrowfunctionformul',()=>{
         let mul=1;
         const multiplication =(i)=>{
             mul=mul*i;

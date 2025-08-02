@@ -89,7 +89,7 @@ describe('Checkbox Interaction', () => {
 
 describe('Assertion', () => {
   
-  it.only('Assertion', () => {
+  it('Assertion', () => {
     cy.visit('https://practice.expandtesting.com/login')
     cy.get('#username').type('practice');
     cy.get('input[name="password"]').type('SuperSecretPassword!');

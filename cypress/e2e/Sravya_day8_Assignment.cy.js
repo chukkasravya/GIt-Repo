@@ -11,7 +11,7 @@ describe('APIrequest',()=>{
             expect(res.body.message).to.eq("User account created successfully");
         });
     })
-it.only('RestAPI', () => {
+it('RestAPI', () => {
   cy.request('POST', 'https://practice.expandtesting.com/notes/api/users/login', {
     email: "scg@gamails41.com",
     password: "scg@gamail35.com"

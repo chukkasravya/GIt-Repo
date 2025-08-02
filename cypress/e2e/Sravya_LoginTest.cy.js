@@ -12,7 +12,7 @@ describe('Login Tests Using Page Object and Fixtures', () => {
     LoginPage.visit();
   });
 
-  it.skip('logs in with valid credentials', function () {
+  it('logs in with valid credentials', function () {
     const { validUser } = this.users;
     LoginPage.enterUsername(validUser.username);
     LoginPage.enterPassword(validUser.password);
@@ -20,7 +20,7 @@ describe('Login Tests Using Page Object and Fixtures', () => {
     cy.get('#flash').should('be.visible').and('include.text', 'You logged into a secure area!');
   });
 
-  it.skip('shows error with invalid credentials', function () {
+  it('shows error with invalid credentials', function () {
     const { invalidUser } = this.users;
     LoginPage.enterUsername(invalidUser.username);
     LoginPage.enterPassword(invalidUser.password);
@@ -39,7 +39,7 @@ describe('Checkboxes Interaction with Pre/Post Validation', () => {
     cy.visit('/checkboxes');
   });
 
-  it.skip('validates initial state, performs actions, then validates final state', () => {
+  it('validates initial state, performs actions, then validates final state', () => {
     CheckboxPage.validateCheckboxState('#checkbox1', 'unchecked');
     CheckboxPage.validateCheckboxState('#checkbox2', 'checked');
 
