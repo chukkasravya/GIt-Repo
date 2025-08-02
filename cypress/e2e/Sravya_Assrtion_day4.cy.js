@@ -39,9 +39,9 @@ describe('RegistrationForm', () => {
     cy.visit(Url);
      });
   it('Registration_Form_Happypath', () => {
-    cy.get('input[name="username"]').type('Sravyachukkkk1');
-    cy.get('#password').type('Sravy677DE@47');
-    cy.get('#confirmPassword').type('Sravy677DE@47');
+    cy.get('input[name="username"]').type('Sravyachukkkku1');
+    cy.get('#password').type('Sravy677DE@471');
+    cy.get('#confirmPassword').type('Sravy677DE@471');
     cy.get('button[type="submit"]').should('be.visible').and('contain.text', 'Register').click();
     cy.get('.alert-info').should('be.visible').and('contain', 'Successfully registered, you can log in now.');
     }),

@@ -11,11 +11,11 @@ describe('Ass6', () => {
     });
 
 it('Registration_Form_Happypath', () => {
-    cy.fixture('FormData').then((user) => {
-    cy.visit('https://practice.expandtesting.com/register')
-    cy.get('input[name="username"]').type(FormData.username);
-    cy.get('#password').type(FormData.password);
-    cy.get('#confirmPassword').type(FormData.confirmPassword);
+     cy.fixture('FormData').then((user) => {
+    cy.visit('https://practice.expandtesting.com/register');
+    cy.get('input[name="username"]').type(user.username);
+    cy.get('#password').type(user.password);
+    cy.get('#confirmPassword').type(user.confirmPassword);
     cy.get('button[type="submit"]').should('be.visible').and('contain.text', 'Register').click();
     
 })});
