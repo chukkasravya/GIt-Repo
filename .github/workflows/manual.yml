@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
 
 jobs:
   cypress-run:
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'  # Adjust if using a different Node version
+          node-version: '18'
 
       - name: Install dependencies
         run: npm ci
@@ -29,7 +29,7 @@ jobs:
         run: npx cypress install
 
       - name: Run Cypress tests with Mochawesome reporter
-        run: npx cypress run --reporter mochawesome --reporter-options reportDir=reports,overwrite=false,html=true,json=true
+        run: npx cypress run
 
       - name: Upload Cypress screenshots (if any)
         if: always()
