@@ -109,7 +109,7 @@ describe('Assertion', () => {
     cy.get('#btn3').should('be.enabled');
     cy.get('#btn4').should('be.disabled');
     cy.get('label[for="a_number"]').should('have.text', 'number');
-    cy.get('a_number').should('exist');
+    cy.get('#a_number').should('exist');
     
     
   })
